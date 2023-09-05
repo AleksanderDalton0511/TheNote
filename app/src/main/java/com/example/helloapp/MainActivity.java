@@ -39,4 +39,17 @@ public class MainActivity extends Activity {
         //You can also do fancy animations to switch between views.
         // Check out the methods accessible and experiment with them!
     }
+    public void stopGame(View v) {
+
+        //First way -- use showNext() & showPrevious()
+
+        //Second way -- use setDisplayedChild(int) where int is
+        // the index of the view starting from 0
+        //In this case, there are two. 0 is the button,
+        // and 1 is the menu layout.
+        viewFlipper.setDisplayedChild(0);
+
+        //You can also do fancy animations to switch between views.
+        // Check out the methods accessible and experiment with them!
+    }
 }
