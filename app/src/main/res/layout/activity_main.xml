@@ -114,4 +114,15 @@
         android:text="Left Top"
         android:textSize="26sp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_marginLeft="157dp"
+        android:layout_marginTop="317dp"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:onClick="changeView"
+        android:backgroundTint="#00F11000" />
+
 </RelativeLayout>
