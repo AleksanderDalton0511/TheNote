@@ -1,6 +1,5 @@
 package com.example.helloapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,13 +14,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     static ArrayList<String> notes = new ArrayList<>();
     static ArrayAdapter arrayAdapter;
+
+    public void CreateNew(View v) {
+        Intent intent = new Intent(getApplicationContext(), NoteEditorActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -30,21 +35,6 @@ public class MainActivity extends Activity {
         menuInflater.inflate(R.menu.add_note_menu, menu);
 
         return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        super.onOptionsItemSelected(item);
-
-        if (item.getItemId() == R.id.add_note) {
-
-            // Going from MainActivity to NotesEditorActivity
-            Intent intent = new Intent(getApplicationContext(), NoteEditorActivity.class);
-            startActivity(intent);
-            return true;
-        }
-
-        return false;
     }
 
     @Override
