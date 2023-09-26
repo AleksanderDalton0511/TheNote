@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace 'com.example.helloapp'
+    namespace 'com.example.example'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.helloapp"
+        applicationId "com.example.example"
         minSdk 21
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
